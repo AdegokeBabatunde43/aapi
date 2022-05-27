@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+    <h2>Posts Page</h2>
+
+
+{% block content %}
+   <div class="container">
+        {% for i in posts %}
+        <li class="card">{{ i.title }}</li>
+        {% endfor %}
+   </div>
+{% endblock content %}
+    
+
+
+    
+
+</body>
+
+</html>

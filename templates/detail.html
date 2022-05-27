@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="card">
+        <h2>{{ single_product.name }}</h2>
+        <p>{{ single_product.desc }}</p>
+        <h4>N{{ single_product.price }}</h4>
+    </div>
+    
+    <a href="/">Back</a>
+{% endblock content %}
+    

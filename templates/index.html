@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<h1>Tech365</h1>
+<p>Welcome to django training</p>
+
+<div class="row">
+    <a href="{% url 'add'  %}"  >Add new Product</a>
+    <!-- <a href="/add">Add</a> -->
+</div>
+
+<div class="container">
+    {% for i in all_product %}
+    <div class="card">
+        <h2>{{i.name}}</h2>
+        <p>{{i.desc}}</p>
+        <h4>N{{i.price}}</h4>
+        <div>
+            <a href="/detail/{{i.id}}">Detail</a>
+            <a href="">Edit</a>
+            <a href="/delete/{{ i.id }}">delete</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- <img src="{% static './images/slide.jpg' %}" alt=""> -->
+{% endblock %}
